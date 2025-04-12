@@ -1,22 +1,48 @@
 {% extends "main.html" %}
 
-{% block page_name %}
-About Cats on Skis
-{% endblock %}
+{% block page_name %}About Cats on Skis{% endblock %}
 
 {% block content %}
-<h3>About Cats on Skis</h3>
+<div class="box">
+    <h1 class="title">About Cats on Skis</h1>
+    <p class="subtitle">
+        We love Cats on Skis! This is the absolute best place to find information about cats on skis.
+    </p>
+</div>
 
-<p>
-We love Cats on Skis! This is the absolute best place to find information about cats on skis.
-</p>
-
-<h3>Your Authors</h3>
-
-<p>
-Slalom Sammy 
-<img src="{{ url_for('images', image='slalom-sammy') }}">
-</p>
-
+<div class="box mt-4">
+    <h2 class="title is-4">Your Authors</h2>
+    
+    <div class="card mb-4">
+        <div class="card-content">
+            <div class="media">
+                <div class="media-left">
+                    <figure class="image is-128x128">
+                        <img src="{{ url_for('images', image='slalom-sammy') }}" alt="Slalom Sammy">
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <p class="title is-4">Slalom Sammy</p>
+                    <p class="subtitle is-6">Expert Cat Skier</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-content">
+            <div class="media">
+                <div class="media-left">
+                    <figure class="image is-128x128">
+                        <img src="{{ url_for('images', image='random-cat-skiing') }}" alt="Nefarious Purpuss">
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <p class="title is-4">Nefarious Purpuss</p>
+                    <p class="subtitle is-6">Urban Skiing Pioneer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
-
